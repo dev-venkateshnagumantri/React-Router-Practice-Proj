@@ -22,23 +22,22 @@ function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/"  element={<RouterLayout />}>
-
         <Route index element={<HomePage />} /> {/*takes path of parent (called as index)*/}
         <Route path="about/" element={<AboutPage />} />
+
         <Route path="contact/" element={<ContactLayout />}>
           <Route path="info/" element={<ContactInfo />} />
           <Route path="address/" element={<ContactAddress />} />
         </Route>
+
         <Route path="jobs/" element={<CareersLayout />} errorElement={<ErrorDisplay />} >
           <Route index element={<JobsPage />} loader={jobsLoader} />
           <Route path=":id/" element={<JobDetails /> } loader = {jobDetailsLoader} />
         </Route>
 
         <Route path="products/" element={<ProductsPage />} />
-        
 
         <Route path="*" element={<h1>404</h1>} />
-
       </Route>
     )
   )
