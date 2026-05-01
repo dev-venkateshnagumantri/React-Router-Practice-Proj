@@ -3,10 +3,10 @@ import ContactPage from "../Pages/ContactPage"
 
 function ContactLayout(){
     return(
-        <>
+        <div>
         <ContactPage />
-        <Outlet />
-        </>
+        <Outlet /> {/* This acts as a slot for child component */}
+        </div>
     );
 }
 
