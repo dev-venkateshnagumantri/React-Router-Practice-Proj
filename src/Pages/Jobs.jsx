@@ -4,13 +4,17 @@ function JobsPage(){
     return(
         <div className="jobs-page">
             <h4>The List of available jobs are:</h4>
+            <br />
             {
                 jobs_data.map(
                     (job)=>{
-                        return (<Link to={job.id}>
-                                    <p><b>{job.title}</b></p>
-                                    <p>₹ {job.salary}</p>
-                                </Link>);
+                        return (
+                        <div>
+                        <Link to={job.id}><p><b>{job.title}</b></p></Link>
+                            <p>₹ {job.salary}</p>
+                            <br />
+                        </div>
+                        );
                     }
                 )
             }

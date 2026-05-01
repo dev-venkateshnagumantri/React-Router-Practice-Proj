@@ -23,7 +23,7 @@ function App() {
     createRoutesFromElements(
       <Route path="/"  element={<RouterLayout />}>
 
-        <Route index element={<HomePage />} /> {/*takes path of parent (called as index component)*/}
+        <Route index element={<HomePage />} /> {/*takes path of parent (called as index)*/}
         <Route path="about/" element={<AboutPage />} />
         <Route path="contact/" element={<ContactLayout />}>
           <Route path="info/" element={<ContactInfo />} />
@@ -35,6 +35,7 @@ function App() {
         </Route>
 
         <Route path="products/" element={<ProductsPage />} />
+        
 
         <Route path="*" element={<h1>404</h1>} />
 

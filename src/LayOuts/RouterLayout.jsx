@@ -1,16 +1,16 @@
 import { Outlet } from "react-router-dom";
-import Navbar from "../Pages/Navbar";
+import Navbar from "../utils/Navbar";
 
 function RouterLayout(){
 
     return (
-        <>
+        <div>
         <Navbar />
         <div className="container">
-            <Outlet />
+            <Outlet /> {/* This acts as a slot for child component */}
         </div>
         
-        </>
+        </div>
     );
 }
 
