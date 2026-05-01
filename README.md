@@ -17,18 +17,18 @@ without React-Router, Clicking a link reloads the page and in that case, react c
 
 The React Router library provides several essential components to build your navigation system.
 
-**BrowserRouter:** It is the Main wrapper and The parent component that enables routing.
-**Routes:** A container that looks through all its child Route elements to find the one that matches the current URL.
-**Route:** Defines a single mapping between a URL path and a React element.
+**BrowserRouter:** It is the Main wrapper and The parent component that enables routing.<br/>
+**Routes:** A container that looks through all its child Route elements to find the one that matches the current URL.<br/>
+**Route:** Defines a single mapping between a URL path and a React element.<br/>
 **Link:** Used to create navigation links. Unlike a standard anchor tag (<a>), it prevents a page reload and updates the URL internally.
 
 ### Advanced Features:
 
-**Dynamic Routing:** Use colons (e.g., :id) in a path to capture dynamic values from the URL. You can retrieve these values inside your component using the useParams hook.
-**Nested Routes:** You can place routes inside other routes to create complex layouts. Use the <Outlet /> component in the parent route to specify where child components should render.
-**Programmatic Navigation:** Use the useNavigate hook to change pages based on logic, such as redirecting a user after they click a button or submit a form.
-**Active Links:** Use <NavLink> instead of <Link> to automatically apply a "active" class or style to the link when it matches the current URL. the <NavLink> gives you the class `active` such that you can use to improve css of the page.
-**loader:** A loader is an asynchronous function that fetches data for a route before it renders. It Ensures data is ready when the component mounts, preventing "loading flickers" or empty states.  Inside your component, use the useLoaderData() hook to retrieve whatever the loader returned.
+**Dynamic Routing:** Use colons (e.g., :id) in a path to capture dynamic values from the URL. You can retrieve these values inside your component using the useParams hook.<br/>
+**Nested Routes:** You can place routes inside other routes to create complex layouts. Use the `Outlet` tag in the parent route to specify where child components should render.<br/>
+**Programmatic Navigation:** Use the useNavigate hook to change pages based on logic, such as redirecting a user after they click a button or submit a form.<br/>
+**Active Links:** Use `NavLink` tag instead of `Link` tag to automatically apply a "active" class or style to the link when it matches the current URL. the `NavLink` gives you the class `active` such that you can use to improve css of the page.<br/>
+**loader:** A loader is an asynchronous function that fetches data for a route before it renders. It Ensures data is ready when the component mounts, preventing "loading flickers" or empty states.  Inside your component, use the useLoaderData hook to retrieve whatever the loader returned.
 
 ### Some important Hooks related to React-Router:
 
